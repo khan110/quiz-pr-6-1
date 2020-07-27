@@ -9,7 +9,7 @@ type props = {
     totalQuestions: number;
 }
 
-export const QuestionCard: React.FC<props> = ({question, answers, userAnswer, questionNum, totalQuestions}) => {
+export const QuestionCard: React.FC<props> = ({question, answers, userAnswer,callback, questionNum, totalQuestions}) => {
     return (
         <div>
           <p> Question : {questionNum} / {totalQuestions} </p>
@@ -17,7 +17,7 @@ export const QuestionCard: React.FC<props> = ({question, answers, userAnswer, qu
           <div>
               {answers.map(answer => (
                   <div>
-                      <button disabled={userAnswer} onClick={userAnswer}>
+                      <button disabled={userAnswer} value={answer} onClick={callback}>
                           <span dangerouslySetInnerHTML={{__html: answer }}/>
                       </button>
                  </div>     
