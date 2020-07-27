@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { QuestionState, fetchQuestions, Difficulty} from './Api';
 import { QuestionCard } from './components/QuestionCard';
+import { GlobalStyle, Wrapper } from './App.styles';
+
 
 // total number of Questions
 const TOTAL_QUESTIONS = 10;
@@ -58,8 +60,11 @@ function App() {
 
 
   return (
-    <div>
+    <>
+    <GlobalStyle/>
+    <Wrapper>
      <h1>Quiz</h1>
+     <img className="bgx" src={require('./components/BG-quiz-app.jpg')} alt="bg" />
 
      {gameOver || userAnswers.length === TOTAL_QUESTIONS ?
      (<button className="start" onClick={startQuiz}>Begin Quiz</button>) : null }
@@ -82,7 +87,8 @@ function App() {
 
       {!gameOver && !loading && userAnswers.length === number +1 && number !== TOTAL_QUESTIONS - 1 ?
      (<button className="Next" onClick={nextQues}>Next</button>) : null}
-    </div>
+    </Wrapper>
+    </>
   );
 }
 
