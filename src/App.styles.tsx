@@ -59,7 +59,7 @@ export const Wrapper = styled.div`
     max-width: 200px;
   }
   .bgx{
-      background-size: 100%;
+      background-size: 100:;
       
   }
 `;
