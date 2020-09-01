@@ -6,7 +6,8 @@ export const GlobalStyle = createGlobalStyle`
         height: 100%;
     }
     body {
-        background-color: navy;
+    
+        background-color: #445677;
         margin: 0;
         padding: 0 20px;
         display flex;
@@ -58,9 +59,8 @@ export const Wrapper = styled.div`
   .start {
     max-width: 200px;
   }
-  .bgx{
-      background-size: 100:;
-      
-  }
+ 
+}
+  
 `;
 
